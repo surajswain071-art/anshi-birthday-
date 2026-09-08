@@ -867,14 +867,12 @@ const photos = [
 ];
 
 
-const track =
-    document.getElementById("filmTrack");
+const track = document.getElementById("filmTrack");
 
 
 function frame(photo,index){
 
-    const el =
-        document.createElement("div");
+    const el = document.createElement("div");
 
     el.className = "frame";
 
@@ -927,8 +925,7 @@ function frame(photo,index){
 );
 
 
-const viewer =
-    document.getElementById("viewer");
+const viewer = document.getElementById("viewer");
 
 const viewerImage =
     document.getElementById("viewerImage");
@@ -951,8 +948,7 @@ function openPhoto(index){
 
     viewer.classList.add("active");
 
-    document.body.style.overflow =
-        "hidden";
+    document.body.style.overflow = "hidden";
 }
 
 
@@ -960,16 +956,14 @@ function closePhoto(){
 
     viewer.classList.remove("active");
 
-    document.body.style.overflow =
-        "";
+    document.body.style.overflow = "";
 }
 
 
 function nextPhoto(){
 
     openPhoto(
-        (current + 1) %
-        photos.length
+        (current + 1) % photos.length
     );
 
 }
@@ -978,8 +972,7 @@ function nextPhoto(){
 function previousPhoto(){
 
     openPhoto(
-        (current - 1 + photos.length) %
-        photos.length
+        (current - 1 + photos.length) % photos.length
     );
 
 }
