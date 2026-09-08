@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Anshi 🎂</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+    font-family:Georgia,serif;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(
+        circle at 50% 45%,
+        #292929,
+        #090909 45%,
+        #000
+    );
+}
+
+.intro:before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.08),
+        transparent 65%
+    );
+    animation:lightMove 9s ease-in-out infinite alternate;
+}
+
+.intro:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    animation:spin 25s linear infinite;
+}
+
+@keyframes lightMove{
+    from{
+        transform:translate(-250px,-120px);
+    }
+    to{
+        transform:translate(250px,120px);
+    }
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.intro-content{
+    z-index:2;
+    animation:appear 2s ease;
+}
+
+.intro-small{
+    font-size:25px;
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+.intro h1{
+    font-size:clamp(55px,10vw,120px);
+    font-weight:400;
+    line-height:.95;
+}
+
+.intro h1 span{
+    font-family:cursive;
+    color:#ddd;
+    display:inline-block;
+}
+
+.intro-line{
+    width:120px;
+    height:1px;
+    background:#777;
+    margin:30px auto;
+}
+
+.intro-date{
+    font-family:cursive;
+    font-size:30px;
+    color:#aaa;
+}
+
+.scroll{
+    margin-top:50px;
+    color:#777;
+    font-family:cursive;
+    font-size:20px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.92);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes pulse{
+    50%{
+        opacity:1;
+        transform:translateY(8px);
+    }
+}
+
+/* FLOATING SYMBOLS */
+
+.float{
+    position:absolute;
+    color:#555;
+    font-size:30px;
+    animation:float 8s infinite ease-in-out;
+    z-index:1;
+}
+
+.f1{
+    left:10%;
+    top:20%;
+}
+
+.f2{
+    left:80%;
+    top:15%;
+    animation-delay:1s;
+}
+
+.f3{
+    left:20%;
+    top:75%;
+    animation-delay:2s;
+}
+
+.f4{
+    left:75%;
+    top:75%;
+    animation-delay:3s;
+}
+
+.f5{
+    left:50%;
+    top:10%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-35px) rotate(25deg);
+    }
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    min-height:100vh;
+    background:#080808;
+    padding:110px 0 100px;
+    overflow:hidden;
+    position:relative;
+}
+
+.title{
+    text-align:center;
+    padding:0 20px;
+    margin-bottom:65px;
+    position:relative;
+    z-index:2;
+}
+
+.title h2{
+    font-size:clamp(45px,7vw,80px);
+    font-weight:400;
+}
+
+.title p{
+    margin-top:15px;
+    color:#777;
+    font-family:cursive;
+    font-size:24px;
+}
+
+/* FILM WINDOW */
+
+.film-window{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    padding:35px 0 60px;
+}
+
+.film-window:before,
+.film-window:after{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:150px;
+    z-index:5;
+    pointer-events:none;
+}
+
+.film-window:before{
+    left:0;
+    background:linear-gradient(
+        to right,
+        #080808,
+        transparent
+    );
+}
+
+.film-window:after{
+    right:0;
+    background:linear-gradient(
+        to left,
+        #080808,
+        transparent
+    );
+}
+
+.film-track{
+    display:flex;
+    align-items:flex-start;
+    gap:35px;
+    width:max-content;
+    animation:filmMove 75s linear infinite;
+}
+
+.film-track:hover{
+    animation-play-state:paused;
+}
+
+@keyframes filmMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* PHOTO FRAME */
+
+.frame{
+    flex-shrink:0;
+    width:260px;
+    cursor:pointer;
+    position:relative;
+    animation:cardFloat 5s ease-in-out infinite;
+}
+
+.frame:nth-child(3n){
+    animation-delay:-2s;
+}
+
+.frame:nth-child(3n+1){
+    animation-delay:-1s;
+}
+
+@keyframes cardFloat{
+    50%{
+        transform:translateY(-8px) rotate(-1deg);
+    }
+}
+
+.photo{
+    background:#111;
+    border:7px solid #191919;
+    box-shadow:
+        0 0 0 1px #444,
+        0 15px 40px #000;
+    overflow:hidden;
+    position:relative;
+}
+
+.photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    filter:grayscale(100%);
+    transition:.7s;
+}
+
+.frame:hover img{
+    filter:grayscale(0);
+    transform:scale(1.07);
+}
+
+.quote{
+    text-align:center;
+    color:#aaa;
+    font-family:cursive;
+    font-size:20px;
+    line-height:1.2;
+    margin-top:15px;
+}
+
+.frame:hover .quote{
+    color:#fff;
+}
+
+/* FILM HOLES */
+
+.holes{
+    position:absolute;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-around;
+    z-index:2;
+    pointer-events:none;
+}
+
+.holes.top{
+    top:-17px;
+}
+
+.holes span{
+    width:15px;
+    height:10px;
+    background:#050505;
+    border-radius:2px;
+}
+
+/* ================= PHOTO VIEWER ================= */
+
+.viewer{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.97);
+    z-index:10;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.viewer.active{
+    display:flex;
+}
+
+.viewer img{
+    max-width:90vw;
+    max-height:80vh;
+    object-fit:contain;
+    border:5px solid #222;
+}
+
+.close{
+    position:absolute;
+    right:30px;
+    top:15px;
+    font-size:45px;
+    cursor:pointer;
+    color:#aaa;
+}
+
+.nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:1px solid #444;
+    background:#111;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.prev{
+    left:25px;
+}
+
+.next{
+    right:25px;
+}
+
+.viewer-quote{
+    position:absolute;
+    bottom:35px;
+    text-align:center;
+    width:90%;
+    font-family:cursive;
+    font-size:25px;
+    color:#ddd;
+}
+
+/* ================= BOOK ================= */
+
+.book-section{
+    min-height:70vh;
+    background:#050505;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px;
+}
+
+.book{
+    width:min(850px,92vw);
+    background:#111;
+    border:1px solid #333;
+    box-shadow:0 30px 80px #000;
+    padding:75px;
+}
+
+.book h2{
+    font-family:cursive;
+    font-size:55px;
+    font-weight:400;
+    margin-bottom:35px;
+}
+
+.book p{
+    font-family:cursive;
+    color:#aaa;
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:22px;
+}
+
+/* ================= NOTE ================= */
+
+.note-section{
+    background:#080808;
+    display:flex;
+    justify-content:center;
+    padding:120px 20px;
+}
+
+.notebook{
+    width:min(900px,94vw);
+    background:#f4f0e7;
+    color:#333;
+    padding:70px 75px 70px 115px;
+    box-shadow:0 30px 90px #000;
+    position:relative;
+}
+
+.notebook:before{
+    content:"";
+    position:absolute;
+    left:78px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#d28b8b;
+}
+
+.note h2{
+    font-family:cursive;
+    font-size:58px;
+    margin-bottom:25px;
+}
+
+.note p{
+    font-family:cursive;
+    font-size:23px;
+    line-height:1.45;
+    margin-bottom:14px;
+}
+
+.signature{
+    text-align:right;
+    font-family:cursive;
+    font-size:30px;
+}
+
+.final{
+    text-align:center;
+    font-family:cursive;
+    font-size:38px;
+    color:#555;
+    margin-top:30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:50px;
+    color:#555;
+    font-family:cursive;
+    font-size:20px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .film-track{
+        gap:22px;
+        animation-duration:65s;
+    }
+
+    .frame{
+        width:190px;
+    }
+
+    .film-window:before,
+    .film-window:after{
+        width:70px;
+    }
+
+    .book{
+        padding:55px 35px 55px 60px;
+    }
+
+    .book h2{
+        font-size:45px;
+    }
+
+    .book p{
+        font-size:21px;
+    }
+
+    .notebook{
+        padding:60px 30px 60px 75px;
+    }
+
+    .notebook:before{
+        left:48px;
+    }
+
+    .note h2{
+        font-size:45px;
+    }
+
+    .note p{
+        font-size:20px;
+    }
+
+    .nav{
+        width:45px;
+        height:45px;
+        font-size:22px;
+    }
+
+    .prev{
+        left:10px;
+    }
+
+    .next{
+        right:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="intro">
+
+    <div class="float f1">✦</div>
+    <div class="float f2">♡</div>
+    <div class="float f3">✧</div>
+    <div class="float f4">♡</div>
+    <div class="float f5">✦</div>
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A little something for you...
+        </div>
+
+        <h1>
+            Happy Birthday<br>
+            <span>Anshi</span> 🎂
+        </h1>
+
+        <div class="intro-line"></div>
+
+        <div class="intro-date">
+            12 September
+        </div>
+
+        <div class="scroll">
+            ↓ scroll down ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="gallery">
+
+    <div class="title">
+
+        <h2>Anshi 🌸</h2>
+
+        <p>
+            A few little moments worth remembering...
+        </p>
+
+    </div>
+
+    <div class="film-window">
+
+        <div
+            class="film-track"
+            id="filmTrack">
+        </div>
+
+    </div>
+
+</section>
+
+
+<div
+    class="viewer"
+    id="viewer">
+
+    <div
+        class="close"
+        id="close">
+        ×
+    </div>
+
+    <button
+        class="nav prev"
+        id="prev">
+        ‹
+    </button>
+
+    <img
+        id="viewerImage"
+        alt="Photo">
+
+    <button
+        class="nav next"
+        id="next">
+        ›
+    </button>
+
+    <div
+        class="viewer-quote"
+        id="viewerQuote">
+    </div>
+
+</div>
+
+
+<section class="book-section">
+
+    <div class="book">
+
+        <h2>
+            A Little Something 🤍
+        </h2>
+
+        <p>
+            Some moments become quietly special and stay with us
+            for a long time. May you always find little reasons
+            to smile.
+        </p>
+
+        <p>
+            I hope your coming days are filled with happiness,
+            peaceful moments, new adventures and beautiful memories.
+            Keep dreaming. Keep growing. Keep being you.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="note-section">
+
+    <div class="notebook">
+
+        <div class="note">
+
+            <h2>
+                Dear Anshi 🤍
+            </h2>
+
+            <p>
+                <b>
+                    Happy Birthday. 🎂
+                </b>
+            </p>
+
+            <p>
+                Sabse pehle, I’m genuinely sorry.
+            </p>
+
+            <p>
+                Past mein mujhse kuch mistakes hui hain,
+                aur mujhe pata hai ki meri wajah se tumhe hurt hua.
+                Main un mistakes ko justify nahi karna chahta.
+                I take responsibility for my actions,
+                and I truly regret them.
+            </p>
+
+            <p>
+                Hum 9th se friends rahe hain,
+                aur tumne mujh par jo trust kiya tha,
+                uski value mujhe hamesha samajhni chahiye thi.
+                Agar meri wajah se tumhe kabhi hurt,
+                uncomfortable ya upset feel hua,
+                then I’m really sorry.
+            </p>
+
+            <p>
+                Mujhe pata hai ki ab shayad tum mujhse
+                baat nahi karna chahti,
+                aur main tumhare decision ko respect karta hoon.
+                Agar kabhi tum comfortable ho,
+                toh kya hum fir se friends ban sakte hain?
+            </p>
+
+            <p>
+                Bas tumhare birthday par tumhe wish karna tha
+                aur ek baar sincerely sorry kehna tha.
+                I hope tumhara birthday bahut achha ho
+                aur tumhari life mein hamesha happiness,
+                peace aur success rahe.
+            </p>
+
+            <div class="signature">
+                — Suraj
+            </div>
+
+            <div class="final">
+                Happy Birthday, Anshi! 🎂
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    Made with memories &amp; good wishes 🤍
+</footer>
+
+
+<script>
+
+const photos = [
+
+    {
+        image:"1.jpeg",
+        quote:"Some moments are beautiful simply because they exist."
+    },
+
+    {
+        image:"2.jpeg",
+        quote:"There is something special about the way you see the world."
+    },
+
+    {
+        image:"3.png",
+        quote:"A little light can make even an ordinary moment unforgettable."
+    },
+
+    {
+        image:"4.jpeg",
+        quote:"The world feels a little brighter when you are smiling."
+    },
+
+    {
+        image:"5.jpeg",
+        quote:"Keep chasing the moments that make your heart happy."
+    },
+
+    {
+        image:"6.jpeg",
+        quote:"Some people carry a quiet kind of magic wherever they go."
+    },
+
+    {
+        image:"7.jpeg",
+        quote:"Keep being yourself — the world needs your kind of light."
+    },
+
+    {
+        image:"8.jpeg",
+        quote:"Collect moments, not things."
+    },
+
+    {
+        image:"9.jpeg",
+        quote:"You make ordinary moments feel a little more special."
+    },
+
+    {
+        image:"10.jpeg",
+        quote:"Dream big, stay kind, and never forget how special you are."
+    },
+
+    {
+        image:"11.jpeg",
+        quote:"In a world full of noise, be the calm and the kindness."
+    },
+
+    {
+        image:"12.jpeg",
+        quote:"Soft hearts can be stronger than anything."
+    },
+
+    {
+        image:"13.jpeg",
+        quote:"May your heart always remain as kind as it is beautiful."
+    },
+
+    {
+        image:"14.jpeg",
+        quote:"May every new year bring you beautiful memories."
+    },
+
+    {
+        image:"15.jpeg",
+        quote:"Your smile makes every memory brighter."
+    }
+
+];
+
+
+const track =
+    document.getElementById("filmTrack");
+
+
+function frame(photo,index){
+
+    const el =
+        document.createElement("div");
+
+    el.className = "frame";
+
+    el.dataset.index = index;
+
+    el.innerHTML = `
+
+        <div class="holes top">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <div class="photo">
+
+            <img
+                src="${photo.image}"
+                alt="Photo"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="quote">
+            ${photo.quote}
+        </div>
+
+    `;
+
+    return el;
+}
+
+
+[...photos,...photos].forEach(
+    (photo,index)=>{
+
+        track.appendChild(
+            frame(
+                photo,
+                index % photos.length
+            )
+        );
+
+    }
+);
+
+
+const viewer =
+    document.getElementById("viewer");
+
+const viewerImage =
+    document.getElementById("viewerImage");
+
+const viewerQuote =
+    document.getElementById("viewerQuote");
+
+let current = 0;
+
+
+function openPhoto(index){
+
+    current = index;
+
+    viewerImage.src =
+        photos[current].image;
+
+    viewerQuote.textContent =
+        photos[current].quote;
+
+    viewer.classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+}
+
+
+function closePhoto(){
+
+    viewer.classList.remove("active");
+
+    document.body.style.overflow =
+        "";
+}
+
+
+function nextPhoto(){
+
+    openPhoto(
+        (current + 1) %
+        photos.length
+    );
+
+}
+
+
+function previousPhoto(){
+
+    openPhoto(
+        (current - 1 + photos.length) %
+        photos.length
+    );
+
+}
+
+
+track.onclick = function(e){
+
+    const f =
+        e.target.closest(".frame");
+
+    if(f){
+
+        openPhoto(
+            Number(f.dataset.index)
+        );
+
+    }
+
+};
+
+
+document
+    .getElementById("close")
+    .onclick = closePhoto;
+
+document
+    .getElementById("next")
+    .onclick = nextPhoto;
+
+document
+    .getElementById("prev")
+    .onclick = previousPhoto;
+
+
+viewer.onclick = function(e){
+
+    if(e.target === viewer){
+
+        closePhoto();
+
+    }
+
+};
+
+
+document.onkeydown = function(e){
+
+    if(
+        !viewer.classList.contains("active")
+    ){
+        return;
+    }
+
+    if(e.key === "Escape"){
+
+        closePhoto();
+
+    }
+
+    if(e.key === "ArrowRight"){
+
+        nextPhoto();
+
+    }
+
+    if(e.key === "ArrowLeft"){
+
+        previousPhoto();
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
